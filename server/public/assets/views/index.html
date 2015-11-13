@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/styles/style.css">
+    <script type="text/javascript" src="/vendors/angular.min.js"></script>
+    <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
+    <script type="text/javascript" src="/vendors/angular-animate.min.js"></script>
+    <script type="text/javascript" src="/assets/scripts/app.min.js"></script>
+    <title></title>
+</head>
+<body>
+
+    <header class="container">
+            <h1>BAM Auto</h1>
+    </header>
+
+    <div class="box" ng-init="value=true">
+    <div id="nav" ng-if="value" class="animate-if">
+        <div class="text-justify">
+            <ul>
+                <li ng-click="value=false"><a href="#home"><h2>Home</h2></a></li>
+                <li ng-click="value=false"><a href="#about"><h2>About Us</h2></a></li>
+                <li ng-click="value=false"><a href="#tips"><h2>Weekly Tips</h2></a></li>
+                <li ng-click="value=false"><a href="#find"><h2>Find Us</h2></a></li>
+                <li ng-click="value=false"><a href="#contact"><h2>Contact Us</h2></a></li>
+            </ul>
+        </div>
+    </div>
+            <main ng-view class="rotate"></main>
+    </div>
+
+
+</body>
+</html>
